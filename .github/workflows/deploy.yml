@@ -1,0 +1,33 @@
+name: Deploy web ke GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+# Memberi izin agar robot bisa menulis ke branch gh-pages
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tarik kode dari repository
+        uses: actions/checkout@v4
+
+      - name: Siapkan Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dan Build Aplikasi (di dalam folder app)
+        run: |
+          cd app
+          npm install
+          npm run build
+
+      - name: Upload hasil build ke branch gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/dist
