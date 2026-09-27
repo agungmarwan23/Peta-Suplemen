@@ -11,3 +11,4 @@ Web GIS statis (tanpa server) untuk memvisualisasikan titik data penduduk/suplem
 - Hosting: GitHub Pages (repo publik). Perhatikan base path saat build (lihat PRD bagian 5.5).
 - Data mentah asli ada di `data-pipeline/raw/` dan TIDAK boleh di-commit (lihat `.gitignore`).
 - Semua path fetch di frontend memakai `import.meta.env.BASE_URL` sebagai prefix.
+ 
