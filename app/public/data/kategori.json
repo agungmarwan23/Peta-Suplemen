@@ -1,0 +1,42 @@
+[
+  {
+    "kode": "kk",
+    "label": "Match KK",
+    "label_lengkap": "MATCH NO KK",
+    "warna": "#22c55e",
+    "urutan": 1,
+    "jumlah": 10796
+  },
+  {
+    "kode": "nl",
+    "label": "Nama Lengkap (Kec 95)",
+    "label_lengkap": "NAMA LENGKAP - KECAMATAN 95 - BELUM DIDATA",
+    "warna": "#a855f7",
+    "urutan": 2,
+    "jumlah": 883
+  },
+  {
+    "kode": "tm",
+    "label": "Tidak Match",
+    "label_lengkap": "TIDAK MATCH",
+    "warna": "#ef4444",
+    "urutan": 3,
+    "jumlah": 15312
+  },
+  {
+    "kode": "ns",
+    "label": "Nama Satu (Desa 100)",
+    "label_lengkap": "NAMA SATU - DESA 100 - BELUM DIDATA",
+    "warna": "#06b6d4",
+    "urutan": 4,
+    "jumlah": 278
+  },
+  {
+    "kode": "lain",
+    "label": "Lainnya",
+    "label_lengkap": "",
+    "warna": "#9ca3af",
+    "urutan": 5,
+    "jumlah": 4
+  }
+]
