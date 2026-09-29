@@ -843,7 +843,7 @@ export default function App() {
 
   if (!auth) return <PasswordGate onSuccess={()=>setAuth(true)} />
 
-  const tileInfo = TILE_LAYERS[activeTile]
+  const tileInfo = TILE_LAYERS[activeTile] || TILE_LAYERS.satellite
 
   return (
     <div className="relative w-full h-[100dvh] max-h-[100dvh] overflow-hidden bg-slate-950 font-sans">
@@ -938,7 +938,7 @@ export default function App() {
       </MapContainer>
 
       {/* Layer Picker Button (Desktop & Mobile) */}
-      <div className={`absolute z-[1001] transition-all ${isMobile ? "top-3 right-3" : "top-4 right-4"}`}>
+      <div className={`absolute ${showLayerPicker ? "z-[1030]" : "z-[1001]"} transition-all ${isMobile ? "top-3 right-3" : "top-4 right-4"}`}>
         <button
           onClick={() => setShowLayerPicker(!showLayerPicker)}
           aria-label="Pilih Lapisan Peta"
@@ -950,7 +950,7 @@ export default function App() {
         </button>
 
         {showLayerPicker && (
-          <div className="absolute top-full right-0 mt-2 w-52 bg-slate-800/95 backdrop-blur-md border border-slate-700/80 rounded-xl shadow-2xl overflow-hidden z-[1025]">
+          <div className="absolute top-full right-0 mt-2 w-52 bg-slate-800/95 backdrop-blur-md border border-slate-700/80 rounded-xl shadow-2xl overflow-hidden z-[1035]">
             {Object.entries(TILE_LAYERS).map(([key, info]) => (
               <button
                 key={key}
